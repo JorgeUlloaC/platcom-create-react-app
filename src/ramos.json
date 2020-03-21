@@ -1,0 +1,50 @@
+[
+
+      {
+      "semestre": 1,
+      "nombre": "Álgebra"
+    },
+    {
+      "semestre": 1,
+      "nombre": "Geometría"
+    },
+    {
+      "semestre": 2,
+      "nombre": "Química"
+    },
+    {
+      "semestre": 2,
+      "nombre": "Álgebra Lineal"
+    },
+    {
+      "semestre": 2,
+      "nombre": "Cálculo en una variable"
+    },
+    {
+      "semestre": 3,
+      "nombre": "Física: Mecánica"
+    },
+    {
+      "semestre": 3,
+      "nombre": "Ecuaciones Diferenciales"
+    },
+    {
+      "semestre": 3,
+      "nombre": "Cálculo en Varias Variables"
+    },
+    {
+      "semestre": 4,
+      "nombre": "Física: Ondas y Electromagnetismo"
+    },
+    {
+      "semestre": 4,
+      "nombre": "Métodos Numéricos"
+    },
+    {
+      "semestre": 4,
+      "nombre": "Estadística y Probabilidades"
+    }]
+  
+    
+  
+  
