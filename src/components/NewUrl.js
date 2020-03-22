@@ -18,7 +18,7 @@ import {
 
 import { useForm } from "react-hook-form";
 
-function NewUrlForm() {
+function NewUrlForm({ramo}) {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = data => {
@@ -27,7 +27,7 @@ function NewUrlForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <p>{this.props.ram}</p>
+      <p>{ramo}</p>
       <input name="titulo" ref={register({ required: true })} />
 
       {errors.titulo && (
@@ -61,7 +61,7 @@ function NewUrlForm() {
 }
 
 
-function NewUrl() {
+function NewUrl({ramo}) {
   const { isOpen, onOpen, onClose } = useDisclosure(false);
 
   return (
@@ -76,7 +76,7 @@ function NewUrl() {
             Formulario de Aporte
           </DrawerHeader>
           <DrawerBody>
-            <NewUrlForm ram={this.props.ramo}/>
+            <NewUrlForm ram={ramo}/>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

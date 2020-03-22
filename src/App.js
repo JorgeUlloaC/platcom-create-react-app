@@ -31,7 +31,7 @@ class App extends Component {
         <Header onSemestre={this.handleSemestre}/>
         {
         (this.state.semestreOpen > 0) ?
-          <div>
+          <div className="row">
             <Sidebar semestre={this.state.semestreOpen} onRamo={this.handleRamo}/>
             <Aportes ramo={this.state.ramo}/>
           </div>
