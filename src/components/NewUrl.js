@@ -16,6 +16,50 @@ import {
   AlertTitle
 } from "@chakra-ui/core";
 
+import { useForm } from "react-hook-form";
+
+function NewUrlForm() {
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = data => {
+    console.log(data)
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <p>{this.props.ram}</p>
+      <input name="titulo" ref={register({ required: true })} />
+
+      {errors.titulo && (
+        <>
+          <Alert status="error">
+            <AlertIcon />
+            <AlertTitle mr={2}>Ingrese título!</AlertTitle>
+          </Alert>
+        </>
+      )}
+
+      <input name="descripcion" ref={register({ required: true })} />
+      {errors.descripcion &&(
+        <>
+          <Alert status="error">
+            <AlertIcon />
+            <AlertTitle mr={2}>Ingrese descripcion!</AlertTitle>
+          </Alert>
+        </>
+      )}
+
+      <input name="link" ref={register({ required: true })} />
+      {errors.link && "Ingrese link!."}
+
+      <input name="autor" ref={register({ required: true })} />
+      {errors.autor && "Ingrese autor!."}
+
+      <input type="submit" />
+    </form>
+  );
+}
+
 
 function NewUrl() {
   const { isOpen, onOpen, onClose } = useDisclosure(false);
@@ -32,6 +76,7 @@ function NewUrl() {
             Formulario de Aporte
           </DrawerHeader>
           <DrawerBody>
+            <NewUrlForm ram={this.props.ramo}/>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
