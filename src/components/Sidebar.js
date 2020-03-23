@@ -12,6 +12,7 @@ class Sidebar extends Component{
         return(
             <div >
                 {ramos.filter(({ semestre }) => {
+                        
                         return semestre === this.props.semestre;
                     })
                     .map((ramo, key) => {

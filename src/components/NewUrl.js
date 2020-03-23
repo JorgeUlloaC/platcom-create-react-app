@@ -26,7 +26,8 @@ function NewUrl({ramo, onAporte}){
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
-      onAporte(data)
+      data.ramo = ramo;
+      onAporte(data);
     };
 
     return (

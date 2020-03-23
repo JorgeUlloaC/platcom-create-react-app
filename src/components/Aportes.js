@@ -28,8 +28,8 @@ function Feature({ title, desc, ...rest}) {
 class Aportes extends Component{
     state = {
         data:[
-            {id:1, titulo:"PrimerAporte", descripcion:"Descripcion de mi aporte",
-             url:"www.uach.cl", nickname:"Tallo"} 
+            {ramo:"Algebra", titulo:"PrimerAporte", descripcion:"Descripcion de mi aporte",
+             url:"www.uach.cl", nickname:"Tallo"}
         ]
     }
 
@@ -46,7 +46,7 @@ class Aportes extends Component{
                     <NewUrl ramo={this.props.ramo} onAporte={this.handleAporte}/>
                 }
                 
-                {this.state.data.map(
+                {this.state.data.filter((obj)=>{return obj.ramo === this.props.ramo}).map(
                     (aporte)=>{
                         return(
                             <StackEx 
