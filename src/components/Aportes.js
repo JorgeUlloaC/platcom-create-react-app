@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import NewUrl from './NewUrl'
 import {
-   Box, Heading, Text, Stack
+   Box, Heading, Text, Stack,  Accordion,
+   AccordionItem,
+   AccordionHeader,
+   AccordionPanel,
+   AccordionIcon
   } from "@chakra-ui/core";
 
 function Feature({ title, desc, ...rest}) {
@@ -39,7 +43,7 @@ class Aportes extends Component{
     }
     render(){
         return(
-            <div className="jumbotron col col-md-10">
+            <div className="col col-md-10">
                 <h1 className="d-inline-block col col-md-9">{this.props.ramo}</h1>
                 {
                     (this.props.ramo === undefined)?<h1>Seleccione un ramo</h1>:
@@ -49,16 +53,30 @@ class Aportes extends Component{
                 {this.state.data.filter((obj)=>{return obj.ramo === this.props.ramo}).map(
                     (aporte)=>{
                         return(
-                            <StackEx
-                                titulo={aporte.titulo}
-                                descripcion={aporte.descripcion}
-                                key={aporte.id}
-                            />
+                          <div className="accordion m-3" id="accordionExample">
+                            <div className="card">
+                              <div className="card-header" id="headingOne">
+                                <h2 className="mb-0">
+                                <h3 
+                                  className="text-primary" data-toggle="collapse" 
+                                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    { aporte.titulo }
+                                </h3>
+                                </h2>
+                              </div>
+        
+                              <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div className="card-body">
+                                    <h6>{ aporte.descripcion }</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                         )
                     }
                 )}
             </div>
-            
         )
     }
 }

@@ -15,14 +15,13 @@ class Sidebar extends Component{
                 <ul className="list-group">
                     {
                     ramos.filter(({ semestre }) => {
-                            
                             return semestre === this.props.semestre;
                         })
                         .map((ramo, key) => {
                             return (
                                 <div>
                                     <li
-                                     className="list-group-item list-group-item-action active mb-2"
+                                     className="list-group-item list-group-item-action active m-2 p-1"
                                      onClick={()=>this.props.onRamo( this.props.semestre, ramo.nombre)}>
                                         <a className="text-white" href="#">{ramo.nombre}</a>
                                     </li>
