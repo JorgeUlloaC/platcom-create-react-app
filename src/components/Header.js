@@ -7,16 +7,18 @@ class Header extends Component{
 
       render(){
         return (
-          <div className="row bg-dark text-white">
-            <h1 className="col-md-3">
+          <div className="navbar navbar-expand-lg navbar-light bg-light">
+            <h1 className="navbar-brand">
               PLATCOM<span>FCI</span>
             </h1>
-            <nav className="col-md-9">
-              <ul className="navbar">
+            <nav className="collapse navbar-collapse">
+              <ul className="navbar-nav mr-auto">
                 {[1, 2, 3, 4].map(n => {
                   return (
-                    <li key={n}>
+                    <li className="nav-item active"key={n}>
                       <a
+                      href="#"
+                      className="nav-link"
                       onClick={()=>this.props.onSemestre(n, undefined)}
                       >
                         Semestre {n}

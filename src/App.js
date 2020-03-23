@@ -26,16 +26,18 @@ class App extends Component {
   render() {
 
     return(
-      <div>
-        <Header onSemestre={this.handleSemestre}/>
-        {
-        (this.state.semestreOpen > 0) ?
-          <div className="row">
-            <Sidebar semestre={this.state.semestreOpen} onRamo={this.handleRamo}/>
-            <Aportes ramo={this.state.ramo}/>
-          </div>
-        :(<VideoExplicativo></VideoExplicativo>)
-      }
+      <div className="container">
+        <div className="">
+          <Header onSemestre={this.handleSemestre}/>
+          {
+          (this.state.semestreOpen > 0) ?
+            <div className="row">
+              <Sidebar semestre={this.state.semestreOpen} onRamo={this.handleRamo}/>
+              <Aportes ramo={this.state.ramo}/>
+            </div>
+          :(<VideoExplicativo ></VideoExplicativo>)
+        }
+        </div>
         
       </div>
     );

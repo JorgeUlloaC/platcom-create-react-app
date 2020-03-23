@@ -1,19 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Button,
-  Input,
-  Icon,
   useDisclosure,
-  Alert,
-  AlertIcon,
-  AlertTitle
 } from "@chakra-ui/core";
 
 import { useForm } from "react-hook-form";
@@ -32,7 +24,8 @@ function NewUrl({ramo, onAporte}){
 
     return (
       <>
-        <input type="submit" className="btn btn-lg btn-warning" value="abrir"
+        <input type="submit" className="btn btn-lg btn-warning d-inline-block mb-3 ml-4" 
+          value="Añadir Aporte"
           onClick={onOpen}
         />
         <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
