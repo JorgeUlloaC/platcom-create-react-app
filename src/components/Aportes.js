@@ -32,8 +32,10 @@ class Aportes extends Component{
              url:"www.uach.cl", nickname:"Tallo"} 
         ]
     }
-    handleAporte = ()=>{
-        console.log("Aporte agregado")
+
+    handleAporte = (data) => {
+      const update = this.state.data.push(data);
+      this.setState({update})
     }
     render(){
         return(
@@ -41,7 +43,7 @@ class Aportes extends Component{
                 <h1>{this.props.ramo}</h1>
                 {
                     (this.props.ramo === undefined)?<h1>Seleccione un ramo</h1>:
-                    <NewUrl ramo={this.props.ramo}/>
+                    <NewUrl ramo={this.props.ramo} onAporte={this.handleAporte}/>
                 }
                 
                 {this.state.data.map(

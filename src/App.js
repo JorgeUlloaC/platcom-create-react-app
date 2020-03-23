@@ -4,7 +4,6 @@ import './App.css';
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Aportes from './components/Aportes';
-import NewUrl from './components/NewUrl';
 
 const VideoExplicativo = () => {
   return <div>video</div>;
