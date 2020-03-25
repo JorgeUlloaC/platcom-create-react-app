@@ -39,22 +39,22 @@ function NewUrl({ramo, onAporte}){
                 handleSubmit(onSubmit)
               }>
                 <p>{ramo}</p>
-                <input name="titulo" ref={register({ required: true })} />
+                <input name="titulo" placeholder="Titulo" ref={register({ required: true })} />
 
                 {errors.titulo && (
                   <h1>Error</h1>
                 )}
 
-                <input name="descripcion" ref={register({ required: true })} />
+                <input name="descripcion" placeholder="Descripcion" ref={register({ required: true })} />
                 {errors.descripcion &&(
                   <h1>Error</h1>
                 )}
 
-                <input name="link" ref={register({ required: true })} />
-                {errors.link && "Ingrese link!."}
+                <input name="link" placeholder="Url" ref={register({ required: true })} />
+                {errors.link && <h1>Error</h1>}
 
-                <input name="autor" ref={register({ required: true })} />
-                {errors.autor && "Ingrese autor!."}
+                <input name="autor" placeholder="Nickname" ref={register({ required: true })} />
+                {errors.autor && <h1>Error</h1>}
 
                 <input type="submit" />
               </form>

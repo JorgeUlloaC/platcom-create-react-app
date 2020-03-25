@@ -8,8 +8,10 @@ class Header extends Component{
       render(){
         return (
           <div className="navbar navbar-expand-lg navbar-light bg-light">
-            <h1 className="navbar-brand">
-              PLATCOM<span>FCI</span>
+            <h1 className="navbar-brand" >
+              <a href="#" onClick={()=>this.props.onSemestre(0, undefined)}>
+                PLATCOM<span>FCI</span>
+              </a>
             </h1>
             <nav className="collapse navbar-collapse">
               <ul className="navbar-nav mr-auto">

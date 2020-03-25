@@ -22,13 +22,16 @@ class App extends Component {
     this.setState({semestreOpen:newSemestre, ramo:newRamo})
   }
 
+  handleGoHome = (newSemestre, newRamo) => {
+    this.setState({semestreOpen:newSemestre, ramo:newRamo})
+  }
 
   render() {
 
     return(
       <div className="container">
         <div className="">
-          <Header onSemestre={this.handleSemestre}/>
+          <Header onSemestre={this.handleSemestre} onGoHome={this.handleGoHome}/>
           {
           (this.state.semestreOpen > 0) ?
             <div className="row">
